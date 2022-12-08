@@ -7,20 +7,20 @@
     <title>Class</title>
 </head>
 <body>
-    <?php foreach($students as $student){
-             if($student->attendence){
+    <ul>
+        <?php foreach($students as $student): ?>
 
-                echo "<strike>". $student->present ."</strike>";
-             }
-    
-             else {
+            <li>
+                    <?php  if($student->isAttendence()): ?>
 
-                 echo $student->present;
-             }
-    
-            
-    } ?>
-
-    
+                            <strike><?=  $student->present; ?></strike>
+                            
+                            <?php else: ?>
+                                <?= $student->present; ?>
+                
+                <?php endif; ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
 </body>
 </html>

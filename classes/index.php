@@ -9,25 +9,38 @@ class Student {
     } 
 
     public function isAttendence() {
-        return $status;
+        return $this->status;
     }
 
     
     public function attendence() {
-        $this->status = true;
-        return $status;
+         $this->status = true;
+        
     }
 
 
 }
 
-$students = [+
+$students = [
     new Student("present"),
     new Student("upsent"),
     new Student("upsent"),
     new Student("present")
 ];
 
+
+// $students = [
+//     new Student("Fawzia"),
+//     new Student("Asila"),
+//     new Student("Najma"),
+//     new Student("Zahra"),
+//     new Student("Somaya"),
+//     ]
+// ;
+
 $students[0]->attendence();
+$students[3]->attendence();
+// echo "<pre>";
+// var_dump($students);
 
 require 'view.php';
