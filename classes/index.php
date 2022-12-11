@@ -17,8 +17,6 @@ class Student {
          $this->status = true;
         
     }
-
-
 }
 
 $students = [

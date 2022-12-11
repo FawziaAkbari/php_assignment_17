@@ -3,10 +3,10 @@
 require 'Task.php';
 
 try {
-    $dbh= new PDO('mysql:host=localhost;dbname=users','root','');
+    $dbh= new PDO('mysql:host=localhost;dbname=users2','root','');
 }
 catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
+    die('Error : ' . $e->getMessage());
 }
 
 // var_dump($dbh);    // gives : object(PDO)#1 (0) { }
@@ -20,9 +20,10 @@ catch (Exception $e) {
 // $sql = "SELECT * FROM user";
 $stmt = $dbh->prepare("SELECT * FROM user"); 
 $stmt->execute();
-$tasks = $stmt->fetchAll(PDO::FETCH_CLASS , 'Task');
-echo "<pre>";
-var_dump($tasks);
+$tasks = $stmt->fetchAll(PDO::FETCH_CLASS, 'Task');
+// echo "<pre>";
+
+// var_dump($tasks);
 
 require 'view.php';
 

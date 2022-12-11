@@ -1,1 +1,0 @@
-create table user(id int auto_increment unique, name varchar(20), last_name varchar(20));
