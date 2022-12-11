@@ -1,15 +1,12 @@
 <?php
 
-
-
-require 'function.php';
 require 'Task.php';
 
-$pdo = connnectionToDB();
+require 'bootstrapt.php';
 
-$tasks = fetchAllTasks($pdo);
-
-
+$tasks = $query->querySelectAll('user', 'Task');
+echo "<pre>";
+var_dump($tasks);
 require 'view.php';
 
 
