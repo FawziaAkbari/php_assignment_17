@@ -5,7 +5,10 @@ return [
         'connection' => 'mysql:host=localhost',
         'dbname' =>'users2',
         'username' => 'root',
-        'password' => ''
+        'password' => '',
+        'options' => [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        ]
 
     ]
 ];

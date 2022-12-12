@@ -8,7 +8,8 @@ class Connection {
             return new PDO(
                 $config['connection'].';dbname='.$config['dbname'],
                 $config['username'],
-                $config['password']
+                $config['password'],
+                $config['options']
             );
             // $pdo = new PDO('mysql:host=localhost;dbname=users', 'root', '');
             // return $pdo;
